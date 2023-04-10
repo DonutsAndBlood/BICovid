@@ -5,8 +5,8 @@ import sqlite3 as sql
 import numpy as np
  
 #Retorna encoding de um CSV
-def DescobreEncoding():
-    with open('MICRODADOS.csv', 'rb') as f:
+def DescobreEncoding(csv):
+    with open(csv, 'rb') as f:
         result = chardet.detect(f.read())
         return result['encoding']
 
